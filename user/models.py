@@ -6,4 +6,4 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=50, null=True, blank=True)
     bio = models.CharField(max_length=400, null=True, blank=True)
     birthday = models.DateField(null=True, blank=True)
-    profile_picture = models.CharField(max_length=50, null=True, blank=True)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
